@@ -2,15 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>City GeoGuessr</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edmonton GeoGuessr</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="map"></div>
-  <button onclick="loadStreetView()">New Random Location in Edmonton</button>
-  
+  <div id="street-view"></div>
+
+  <button id="next-location">Next Location</button>
+
+  <div id="map-container">
+    <div id="mini-map"></div>
+    <button id="submit-guess">Submit Guess</button>
+    <div id="distance-info"></div>
+  </div>
+
   <script src="script.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdRHf5oK1D1KBd0-QSIq9Me3SAKu_MdqI&callback=initMap"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdRHf5oK1D1KBd0-QSIq9Me3SAKu_MdqI&callback=initMap&libraries=geometry">
+  </script>
 </body>
 </html>
